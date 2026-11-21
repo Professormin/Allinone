@@ -6,7 +6,7 @@
 
 把这句话发给能访问你电脑文件的 Codex：
 
-> 请帮我安装「视频素材匣」Skill：https://github.com/Professormin/video-material-inbox
+> 请帮我安装「视频素材匣」：https://github.com/Professormin/video-material-inbox
 
 <details>
 <summary>手动安装</summary>
@@ -23,6 +23,6 @@
 
 接着发截图、文件、链接或本地路径。要找回来时，说 **「看一下素材」**。换了聊天，可以说「打开秋季园艺的素材」。
 
-也可以输入 `$video-material-inbox`，直接选中这个 Skill。
+也可以输入 `$video-material-inbox`，直接打开视频素材匣。
 
 MIT License.
