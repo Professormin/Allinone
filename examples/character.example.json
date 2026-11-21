@@ -1,0 +1,15 @@
+{
+  "name": "Example Character",
+  "identity_reference": "./private/reference.png",
+  "fixed_traits": [
+    "Choose a distinctive silhouette",
+    "Choose one signature accessory and specify anatomical side"
+  ],
+  "allowed_changes": [
+    "expression",
+    "pose",
+    "scene"
+  ],
+  "style": "Configurable illustration style",
+  "aspect_ratio": "16:9"
+}
