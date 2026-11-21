@@ -4,7 +4,7 @@
 
 看到一张参考图，顺手发给助手。过几天开始剪视频，说一声「看一下素材」，它就会列出这个主题里收过的内容和备注。
 
-[逐步体验](https://professormin.github.io/video-material-inbox/#demo) · [下载最新版 ZIP](https://github.com/Professormin/video-material-inbox/releases/download/v0.1.3/video-material-inbox-v0.1.3.zip) · [发布页](https://github.com/Professormin/video-material-inbox/releases/latest)
+[逐步体验](https://professormin.github.io/video-material-inbox/#demo) · [下载 v0.1.3 ZIP](https://github.com/Professormin/video-material-inbox/releases/download/v0.1.3/video-material-inbox-v0.1.3.zip) · [下载最新版](https://github.com/Professormin/video-material-inbox/releases/latest)
 
 [![阳台种植实跑案例：选主题、收一张截图和一个链接，再从索引调取](docs/assets/case.png)](https://professormin.github.io/video-material-inbox/#case)
 
