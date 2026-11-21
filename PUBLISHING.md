@@ -2,6 +2,8 @@
 
 本文件描述发布方法，不代表某次版本已经上线。实际公开链接应以托管平台验证结果为准。
 
+本项目仓库：https://github.com/Professormin/beike 。正式版本入口：https://github.com/Professormin/beike/releases 。下方命令中的 YOUR_ACCOUNT 对本项目使用 Professormin；其他工具替换为自己的账户与项目名。
+
 ## 首次发布
 
 1. 在维护者账户创建独立公开仓库，例如 `beike`，只上传本工具。不改变其他仓库的可见性。
