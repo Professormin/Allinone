@@ -1,0 +1,4 @@
+interface:
+  display_name: "备课 Skill"
+  short_description: "面向各学科的图解课件、教学设计与逐页教师备课对照表制作流程"
+  default_prompt: "使用 $beike，根据我的教学对象、课时和资料制作课件与教师备课对照表。"
