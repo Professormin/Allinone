@@ -1,11 +1,11 @@
 ---
 name: video-material-inbox
-description: Use when the user wants to collect screenshots, files, links, or file paths under a video topic with minimal replies, or explicitly asks to retrieve those materials for video production. 适用于按主题安静收存视频素材，以及后续按需调取。
+description: 按主题收存视频素材并在需要时调取。用户说「收素材」「收素材：主题名」「打开某主题的素材」或在收件主题内说「看一下素材」时使用。支持截图、附件、本地路径和链接，收件时简短回复。
 ---
 
 # 视频素材匣
 
-收到「收素材：主题名」或等同指令时建立或打开该主题。再收到单独的截图、文件、路径、链接或附带备注时，直接按该主题收存。一次投递可以有多项。只有用户明确要求制作时，才进入视频制作。
+收到「收素材：主题名」或等同指令时建立或打开该主题。只说「收素材」时，沿用当前聊天已选主题；当前没有主题时，只问「这批素材放在哪个主题？」。再收到单独的截图、文件、路径、链接或附带备注时，直接按该主题收存。一次投递可以有多项。只有用户明确要求制作时，才进入视频制作。
 
 ## 主题与位置
 
