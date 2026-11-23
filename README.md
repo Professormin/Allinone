@@ -2,6 +2,8 @@
 
 **iris 的效率工具和 AI 技能系列。每个子目录是一个独立的工具，可以单独拿走用。**
 
+> **📦 仓库迁移（2026-11-23）：** 原来的独立仓库 `suiji`、`beike`、`video-material-inbox`、`remotion-story-studio`、`Geek-Empire`、`safe-duplicate-cleaner` 已全部并进本仓库的子目录，原仓库已删除（`suiji` 是改名成了本仓库）。推送或发布前请先看 [迁移记录 MIGRATION.md](MIGRATION.md)，按新路径操作。
+
 技能都按通用的 Agent Skills 格式写（`SKILL.md` + 脚本），Claude、Codex、Cursor、Gemini CLI 等都能装；不支持技能的 AI（ChatGPT、豆包等）把 `SKILL.md` 正文贴进自定义指令也能用。脚本只用 Python 标准库。
 
 | 目录 | 是什么 | 一句话说明 |
