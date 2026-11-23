@@ -23,7 +23,13 @@
 请帮我安装「随手问」：https://github.com/Professormin/allinone/tree/main/suiwen
 ```
 
-把链接换成上表里对应的目录即可。Claude 网页 / 桌面版直接上传 [`zip/`](zip/) 里打包好的 zip。
+把链接换成上表里对应的目录即可。
+
+## 下载打包好的版本
+
+所有安装包都放在 [`zip/`](zip/)（附 sha256 校验值）：suiwen、yijuhua-guidang、beike、video-material-inbox、remotion-story-studio。Claude 网页 / 桌面版直接上传对应的 zip。随手记的 `Suiji.exe` 在 [Releases](https://github.com/Professormin/allinone/releases/latest)。
+
+视频素材匣的演示网页在 [`docs/video-material-inbox/`](docs/video-material-inbox/)，开启 GitHub Pages 后地址是 https://professormin.github.io/Allinone/video-material-inbox/ 。
 
 ## 新增工具的约定
 

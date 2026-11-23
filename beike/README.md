@@ -2,7 +2,7 @@
 
 面向各学科教师的 AI 备课流程：把学习目标、教材或旧课件，整理成**图解课件 + 逐页教师备课对照表**。
 
-[下载最新版](https://github.com/Professormin/beike/releases/latest) · [源码](https://github.com/Professormin/allinone/tree/main/beike) · [反馈问题](https://github.com/Professormin/allinone/issues)
+[下载最新版](https://github.com/Professormin/allinone/raw/main/zip/beike-v0.1.0.zip) · [源码](https://github.com/Professormin/allinone/tree/main/beike) · [反馈问题](https://github.com/Professormin/allinone/issues)
 
 学科、年级、课时、风格和输出目录都可配置。数学、历史、文学、自然科学和职业培训可沿用流程，具体内容由 AI 结合资料生成并核对。
 

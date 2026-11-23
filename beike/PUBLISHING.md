@@ -2,7 +2,7 @@
 
 本文件描述发布方法，不代表某次版本已经上线。实际公开链接应以托管平台验证结果为准。
 
-本项目仓库：https://github.com/Professormin/allinone/tree/main/beike 。正式版本入口：https://github.com/Professormin/beike/releases 。下方命令中的 YOUR_ACCOUNT 对本项目使用 Professormin；其他工具替换为自己的账户与项目名。
+本项目仓库：https://github.com/Professormin/allinone/tree/main/beike 。正式版本入口：https://github.com/Professormin/allinone/tree/main/zip 。下方命令中的 YOUR_ACCOUNT 对本项目使用 Professormin；其他工具替换为自己的账户与项目名。
 
 ## 首次发布
 
