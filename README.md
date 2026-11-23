@@ -14,7 +14,6 @@
 | [`remotion-story-studio/`](remotion-story-studio/) | AI 技能 | Remotion 故事工作室：可编辑霓虹文字，按剧情和角色参考图做动态漫画视频 |
 | [`beike/`](beike/) | AI 技能 | 备课：把学习目标、教材或旧课件整理成图解课件 + 逐页教师备课对照表 |
 | [`safe-duplicate-cleaner/`](safe-duplicate-cleaner/) | 电脑小工具 | 安全查重清理：先保护完整项目文件夹，重复文件隔离而不直接删除 |
-| [`wp-supply-intake/`](wp-supply-intake/) | WordPress 插件 | 供货征集表：发一个链接让别人手机填数量、报价、照片，数据直接进你自己网站后台，可汇总导出 |
 
 每个子目录都保留了原仓库的提交记录，用 `git log -- <目录名>` 能看到。
 
@@ -28,7 +27,7 @@
 
 ## 下载打包好的版本
 
-所有安装包都放在 [`zip/`](zip/)（附 sha256 校验值）：suiwen、yijuhua-guidang、beike、video-material-inbox、remotion-story-studio，以及 WordPress 插件 wp-supply-intake（后台「上传插件」直接用）。Claude 网页 / 桌面版直接上传对应的 zip。随手记的 `Suiji.exe` 在 [Releases](https://github.com/Professormin/allinone/releases/latest)。
+所有安装包都放在 [`zip/`](zip/)（附 sha256 校验值）：suiwen、yijuhua-guidang、beike、video-material-inbox、remotion-story-studio。Claude 网页 / 桌面版直接上传对应的 zip。随手记的 `Suiji.exe` 在 [Releases](https://github.com/Professormin/allinone/releases/latest)。
 
 视频素材匣的演示网页在 [`docs/video-material-inbox/`](docs/video-material-inbox/)，开启 GitHub Pages 后地址是 https://professormin.github.io/Allinone/video-material-inbox/ 。
 
