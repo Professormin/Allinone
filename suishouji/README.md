@@ -30,6 +30,7 @@
 | `Ctrl+V` | 粘贴文字、截图（存成 PNG）或复制的文件 |
 | 把文件拖进窗口 | 作为附件保存（复制一份，原文件不动） |
 | `Esc` / 点 × | 取消，不保存 |
+| 点右下角「📁 改保存位置」 | 随时换保存文件夹，下一条起存到新位置（旧记录不会移动） |
 
 ## 保存在哪
 
@@ -68,7 +69,7 @@ pythonw suiji.py
 ```bat
 python suiji.py 要存的一句话
 python suiji.py --stdin < note.txt   & rem 多行原样保存
-python suiji.py --folder             & rem 重新选择保存文件夹
+python suiji.py --folder             & rem 重新选择保存文件夹（弹窗右下角按钮也能改）
 python suiji.py --uninstall          & rem 取消开机自启
 ```
 

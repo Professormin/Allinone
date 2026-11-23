@@ -29,7 +29,7 @@ import json
 import shutil
 from datetime import datetime, timezone, timedelta
 
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 APP = "Suiji"
 BJ = timezone(timedelta(hours=8))   # 时间戳用北京时间；需要本地时间可改成 None
 FROZEN = getattr(sys, "frozen", False)
@@ -69,7 +69,7 @@ def note_dir():
     return d or None
 
 
-def choose_folder(parent=None):
+def choose_folder(parent=None, intro=True):
     import tkinter as tk
     from tkinter import filedialog, messagebox
     own = parent is None
@@ -77,9 +77,11 @@ def choose_folder(parent=None):
         parent = tk.Tk()
         parent.withdraw()
         parent.attributes("-topmost", True)
-    messagebox.showinfo("随手记", "请选择一个文件夹，用来保存你随手记下的文字、截图和文件。\n\n"
-                        "建议放在 Obsidian 库或经常备份的位置。", parent=parent)
-    d = filedialog.askdirectory(parent=parent, title="随手记：选择保存文件夹")
+    if intro:
+        messagebox.showinfo("随手记", "请选择一个文件夹，用来保存你随手记下的文字、截图和文件。\n\n"
+                            "建议放在 Obsidian 库或经常备份的位置。", parent=parent)
+    d = filedialog.askdirectory(parent=parent, title="随手记：选择保存文件夹",
+                                initialdir=note_dir() or os.path.expanduser("~"))
     if own:
         parent.destroy()
     if not d:
@@ -354,13 +356,31 @@ def popup():
     root = tk.Tk()
     root.title("随手记")
     root.attributes("-topmost", True)
-    w, h = 600, 220
+    w, h = 620, 240
     root.geometry("%dx%d+%d+%d" % (w, h, (root.winfo_screenwidth() - w) // 2,
                                     (root.winfo_screenheight() - h) // 3))
     tk.Label(root, text="Enter 保存 · Shift+Enter 换行 · Esc 取消 · Ctrl+V 可粘截图/文件 · 文件可直接拖进来",
              fg="#666").pack(anchor="w", padx=10, pady=(8, 2))
+    bar = tk.Frame(root)
+    bar.pack(side="bottom", fill="x", padx=10, pady=(2, 8))
+    where = tk.Label(bar, text="", fg="#888", anchor="w")
+
+    def show_where():
+        where.config(text="保存到：" + (note_dir() or "（未选择）"))
+
+    def change_folder():
+        if choose_folder(parent=root, intro=False):
+            show_where()
+            plog("保存目录改为：%s" % note_dir())
+        root.lift()
+        box.focus_force()
+
+    tk.Button(bar, text="📁 改保存位置", command=change_folder, relief="groove",
+              padx=6, cursor="hand2").pack(side="right")
+    where.pack(side="left", fill="x", expand=True)
+    show_where()
     info = tk.Label(root, text="", fg="#2a7", anchor="w", justify="left", wraplength=560)
-    info.pack(side="bottom", fill="x", padx=10, pady=(2, 8))
+    info.pack(side="bottom", fill="x", padx=10, pady=(2, 0))
     box = tk.Text(root, height=3, font=("Microsoft YaHei", 12), wrap="word")
     box.pack(fill="both", expand=True, padx=10)
     items = []  # [("file", path) | ("png", tmp)]
@@ -474,6 +494,7 @@ def show_toast(msg):
 
 # ---------------- 后台快捷键 / 自启 ----------------
 MUTEX = "Suiji_hotkey_daemon_v1"
+LEGACY_MUTEX = "suiji_hotkey_daemon"   # 早期脚本版的后台，视为已在运行
 
 
 def self_cmd(*args):
@@ -489,7 +510,18 @@ def self_cmd(*args):
 def daemon_running():
     import ctypes
     k32 = ctypes.windll.kernel32
-    h = k32.OpenMutexW(0x00100000, False, MUTEX)   # SYNCHRONIZE
+    for name in (MUTEX, LEGACY_MUTEX):
+        h = k32.OpenMutexW(0x00100000, False, name)   # SYNCHRONIZE
+        if h:
+            k32.CloseHandle(h)
+            return True
+    return False
+
+
+def daemon_running_legacy():
+    import ctypes
+    k32 = ctypes.windll.kernel32
+    h = k32.OpenMutexW(0x00100000, False, LEGACY_MUTEX)
     if h:
         k32.CloseHandle(h)
         return True
@@ -528,7 +560,7 @@ def daemon():
     try:
         k32, u32 = ctypes.windll.kernel32, ctypes.windll.user32
         k32.CreateMutexW(None, False, MUTEX)
-        if k32.GetLastError() == 183:
+        if k32.GetLastError() == 183 or daemon_running_legacy():
             return
         log("daemon.log", "启动 v%s %s" % (VERSION, " ".join(self_cmd())))
         ok = u32.RegisterHotKey(None, 1, 0x2 | 0x1 | 0x4000, 0x4A)   # Ctrl+Alt+J，不重复触发
