@@ -1,0 +1,20 @@
+{
+  "title": "Example motion comic",
+  "scenes": [
+    {
+      "image": "demo/scene-1.svg",
+      "caption": "A small idea",
+      "seconds": 2
+    },
+    {
+      "image": "demo/scene-2.svg",
+      "caption": "One step at a time",
+      "seconds": 2
+    },
+    {
+      "image": "demo/scene-3.svg",
+      "caption": "A brighter day",
+      "seconds": 2
+    }
+  ]
+}

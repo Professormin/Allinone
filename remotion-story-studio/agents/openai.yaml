@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remotion Story Studio"
+  short_description: "可调文字路径与角色分镜视频制作，支持多字体、预览和导出"
+  default_prompt: "Use $remotion-story-studio to create an editable Remotion video or turn my plot and character references into a motion comic."
