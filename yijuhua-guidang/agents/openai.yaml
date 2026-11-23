@@ -1,0 +1,4 @@
+interface:
+  display_name: "一句话归档"
+  short_description: "发一句话就存进本地笔记库，不复述不追问，只回文件路径"
+  default_prompt: "$yijuhua-guidang "

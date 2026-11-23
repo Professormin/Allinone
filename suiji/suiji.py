@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Suiji 随手记 —— Windows 全局快捷键快速收集工具（Quick Capture）
-https://github.com/Professormin/suiji     MIT License
+https://github.com/Professormin/allinone    MIT License
 
 按 Ctrl+Alt+J，在任何软件里把一句话、截图、文件扔进本地文件夹，自动带时间戳。
 不联网、不用账号、不花 AI token，只用 Python 标准库。

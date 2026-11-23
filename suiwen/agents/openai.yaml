@@ -1,0 +1,4 @@
+interface:
+  display_name: "随手问"
+  short_description: "一次性问题都在一个置顶对话里问，默认每题独立；说「存档」写成知识卡片存进本地"
+  default_prompt: "$suiwen 这个问题和前面无关："
