@@ -13,7 +13,7 @@
 复制下面这句话发给你的助手：
 
 ```text
-请帮我安装「视频素材匣」：https://github.com/Professormin/video-material-inbox
+请帮我安装「视频素材匣」：https://github.com/Professormin/allinone/tree/main/video-material-inbox
 ```
 
 ## 装好后怎么说

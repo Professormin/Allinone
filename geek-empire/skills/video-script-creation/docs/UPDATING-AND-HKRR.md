@@ -1,5 +1,5 @@
 # Maintaining the Script System Across Chats
-1. With user's authorization, load latest `Professormin/Geek-Empire/skills/video-script-creation`.
+1. With user's authorization, load latest `Professormin/allinone/geek-empire/skills/video-script-creation`.
 2. Collect reference scripts in a PRIVATE source library, linking source IDs to analytical cards and creative structures.
 3. Source selection is valid as a personal aesthetic preference without proving high views.
 4. Route a new topic based on what viewers should gain, not subject keywords.

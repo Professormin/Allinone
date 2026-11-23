@@ -2,7 +2,7 @@
 
 面向各学科教师的 AI 备课流程：把学习目标、教材或旧课件，整理成**图解课件 + 逐页教师备课对照表**。
 
-[下载最新版](https://github.com/Professormin/beike/releases/latest) · [源码](https://github.com/Professormin/beike) · [反馈问题](https://github.com/Professormin/beike/issues)
+[下载最新版](https://github.com/Professormin/beike/releases/latest) · [源码](https://github.com/Professormin/allinone/tree/main/beike) · [反馈问题](https://github.com/Professormin/allinone/issues)
 
 学科、年级、课时、风格和输出目录都可配置。数学、历史、文学、自然科学和职业培训可沿用流程，具体内容由 AI 结合资料生成并核对。
 
@@ -19,7 +19,7 @@
 
 下载并解压版本化 ZIP，得到 `beike/` 文件夹。
 
-也可下载源代码：`git clone https://github.com/Professormin/beike.git`。
+也可下载源代码：`git clone https://github.com/Professormin/allinone.git`。
 
 - **Codex**：复制到个人技能目录 `~/.codex/skills/beike/`，或设置了 CODEX_HOME 时的 `$CODEX_HOME/skills/beike/`。重新打开会话后调用 `$beike`。
 - **Claude Code 等支持 SKILL.md 的工具**：按其技能安装机制放置整个文件夹；路径与调用语法以该工具为准。此版本未逐个平台验证。
