@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频素材匣"
+  short_description: "说「收素材」即可按主题保存截图、附件、路径和链接，之后随时调取"
+  default_prompt: "$video-material-inbox 收素材：秋季园艺"
