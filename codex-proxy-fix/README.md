@@ -36,6 +36,10 @@ Codex 优先读取用户环境变量 `HTTP_PROXY / HTTPS_PROXY / ALL_PROXY`。�
 powershell -ExecutionPolicy Bypass -File "完整路径\fix_codex_proxy.ps1"
 ```
 
+## 发新版
+
+改完脚本后把本目录的 `VERSION` 改成新版本号并推送到 main，GitHub Actions 会自动编译 exe 并发布 Release `codex-proxy-fix-v版本`。
+
 ## 注意
 
 - exe 是用 [ps2exe](https://github.com/MScholtes/PS2EXE) 在 GitHub Actions 上从本目录的 `fix_codex_proxy.ps1` 自动编译出来的，没有代码签名，Windows Defender 或 SmartScreen 可能会报警告。介意的话可以直接用 ps1 脚本，内容完全一样，代码也都在这个仓库里。
