@@ -17,6 +17,7 @@
 | [`beike/`](beike/) | AI 技能 | 备课：把学习目标、教材或旧课件整理成图解课件 + 逐页教师备课对照表 |
 | [`safe-duplicate-cleaner/`](safe-duplicate-cleaner/) | 电脑小工具 | 安全查重清理：先保护完整项目文件夹，重复文件隔离而不直接删除 |
 | [`web-gallery-grabber/`](web-gallery-grabber/) | 电脑小工具 + AI 技能 | 网页图库一键存图：一个网页上的图全部下载原图，按图下的名字命名，附下载清单 |
+| [`codex-proxy-fix/`](codex-proxy-fix/) | Windows 小工具 | Codex 代理修复：开着加速器 Codex 却连不上网时双击一下，把失效的代理变量同步到加速器当前端口 |
 
 每个子目录都保留了原仓库的提交记录，用 `git log -- <目录名>` 能看到。
 
@@ -30,7 +31,7 @@
 
 ## 下载打包好的版本
 
-所有安装包都放在 [`zip/`](zip/)（附 sha256 校验值）：suiwen、yijuhua-guidang、beike、video-material-inbox、remotion-story-studio、web-gallery-grabber。Claude 网页 / 桌面版直接上传对应的 zip。随手记的 `Suiji.exe` 在 [Releases](https://github.com/Professormin/allinone/releases/latest)。
+所有安装包都放在 [`zip/`](zip/)（附 sha256 校验值）：suiwen、yijuhua-guidang、beike、video-material-inbox、remotion-story-studio、web-gallery-grabber。Claude 网页 / 桌面版直接上传对应的 zip。随手记的 `Suiji.exe` 在 [Releases](https://github.com/Professormin/allinone/releases/latest)。Codex 代理修复的 `fix_codex_proxy.exe` 在 [Releases](https://github.com/Professormin/allinone/releases?q=codex-proxy-fix)（标签 `codex-proxy-fix-v版本`）。
 
 视频素材匣的演示网页在 [`docs/video-material-inbox/`](docs/video-material-inbox/)，开启 GitHub Pages 后地址是 https://professormin.github.io/Allinone/video-material-inbox/ 。
 

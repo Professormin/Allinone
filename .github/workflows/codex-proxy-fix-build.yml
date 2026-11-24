@@ -1,0 +1,55 @@
+name: Build codex-proxy-fix exe
+
+on:
+  push:
+    tags: ['codex-proxy-fix-v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: codex-proxy-fix
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ps2exe
+        shell: powershell
+        run: |
+          Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+          Install-Module ps2exe -Scope CurrentUser -Force
+
+      - name: Compile fix_codex_proxy.exe
+        shell: powershell
+        run: |
+          Import-Module ps2exe
+          Invoke-ps2exe -inputFile .\fix_codex_proxy.ps1 -outputFile .\fix_codex_proxy.exe `
+            -title 'Codex Proxy Fix' -product 'codex-proxy-fix' -version '1.0.0.0' `
+            -description 'Sync Codex proxy env vars to the Windows system proxy'
+          Get-FileHash .\fix_codex_proxy.exe -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  fix_codex_proxy.exe" } | Out-File -Encoding ascii .\SHA256.txt
+          Get-Content .\SHA256.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fix_codex_proxy
+          path: |
+            codex-proxy-fix/fix_codex_proxy.exe
+            codex-proxy-fix/SHA256.txt
+
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Codex 代理修复 ${{ github.ref_name }}
+          make_latest: false
+          body: |
+            双击 `fix_codex_proxy.exe` 一键修复 Windows 上 Codex 开着加速器却连不上网。说明见 [codex-proxy-fix/README.md](https://github.com/Professormin/allinone/tree/main/codex-proxy-fix)。
+            exe 由 ps2exe 从同版本的 `fix_codex_proxy.ps1` 自动编译，未签名，Defender/SmartScreen 可能提示；介意可直接用 ps1。
+          files: |
+            codex-proxy-fix/fix_codex_proxy.exe
+            codex-proxy-fix/fix_codex_proxy.ps1
+            codex-proxy-fix/SHA256.txt
